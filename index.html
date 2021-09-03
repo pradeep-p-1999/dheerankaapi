@@ -70,18 +70,120 @@
 		</div>
 		<div class="clearfix"></div>
 	</div>
+	<style>
+		
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
 
+  50% {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+
+@keyframes shake {
+  0%, 100% {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  10%, 30%, 50%, 70%, 90% {
+    -webkit-transform: translateX(-10px);
+    -ms-transform: translateX(-10px);
+    transform: translateX(-10px);
+  }
+
+  20%, 40%, 60%, 80% {
+    -webkit-transform: translateX(10px);
+    -ms-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+}
+@keyframes zoomInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(.1) translateY(2000px);
+    -ms-transform: scale(.1) translateY(2000px);
+    transform: scale(.1) translateY(2000px);
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: scale(.475) translateY(-60px);
+    -ms-transform: scale(.475) translateY(-60px);
+    transform: scale(.475) translateY(-60px);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+}
+@keyframes zoomOut {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0;
+    -webkit-transform: scale(.3);
+    -ms-transform: scale(.3);
+    transform: scale(.3);
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+		
+#cf img.bottom {
+animation-name: pulse;
+animation-timing-function:ease-in-out;
+animation-iteration-count:initial;
+animation-duration: 4s;
+animation-direction: alternate;
+}
+.slogan{
+animation-name: pulse;
+animation-timing-function:ease-in-out;
+animation-iteration-count:initial;
+animation-duration: 4s;
+animation-direction: alternate;
+}
+
+
+	</style>
 	<!-- start search-->	
 		<div class="banner" >
 
-			<img src="images/dkLogo.jpg" alt="Logo" style="width:100%; max-width: 400px; height:auto;">
-			
+			<div id="cf" >
+				
+				<img class="bottom" src="images/dkLogo.jpg"  alt="Logo" style="width:100%; max-width: 400px; height:auto;">
+
+			</div>
+
 			<br/>
 			<label></label>
-			<p></p>
+			
 			
 			<br/>
-			<h4 class="animated wow fadeInTop" data-wow-duration="1000ms" data-wow-delay="500ms" style="  height:100%;">Aroma of Tradition</h4>
+			<h4 class="slogan" style=" height:100%;">Aroma of Tradition</h4>
 			
 			
 			<a class="scroll down" href="#content-down"><img style=" width:100%; max-width: 50px; height:auto;" src="images/doubledown.gif" alt=""></a>
