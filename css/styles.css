@@ -14,7 +14,7 @@ body{
 }
 
 .navicon:before, .navicon:after {
-  background: #fff;
+  background: rgb(0, 0, 0);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   content: "";
@@ -26,7 +26,7 @@ body{
 }
 
 .navicon:before {
-  box-shadow: #fff 0 9px 0 0;
+  box-shadow: rgb(0, 0, 0) 0 9px 0 0;
   position: absolute;
   top: 0;
 }
